@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+:root {
+  --LightRed: hsl(0, 100%, 67%);
+  --OrangeyYellow: hsl(39, 100%, 56%);
+  --GreenTeal: hsl(166, 100%, 37%);
+  --CobaltBlue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+
+  --LightRoyalBlue: hsl(241, 81%, 54%); /* background */
+  --LightSlateBlue: hsl(252, 100%, 67%); /* background */
+
+  --VioletBlue: hsla(256, 72%, 46%, 1); /* circle */
+  --PersianBlue: hsla(241, 72%, 46%, 0); /* circle */
+
+  /* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --PaleBlue: hsl(221, 100%, 96%);
+  --LightLavender: hsl(241, 100%, 89%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "HankenGrotesk";
+}
+body {
+  height: 100vh;
+}
+p {
+  font-size: 1.8rem;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+}
+.header {
+  background: linear-gradient(
+    to bottom,
+    var(--LightSlateBlue),
+    var(--LightRoyalBlue)
+  );
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 2.5rem 2.5rem;
+  gap: 1rem;
+  padding: 1rem 2rem 2.5rem;
+}
+.header h1 {
+  font-size: 1rem;
+  opacity: 0.6;
+  font-weight: 800;
+}
+
+.score {
+  width: 7rem;
+  height: 7rem;
+  background: linear-gradient(
+    to bottom,
+    var(--VioletBlue),
+    var(--LightRoyalBlue)
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.score h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.score span {
+  font-size: 0.7rem;
+  opacity: 0.6;
+
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+
+.addInfo {
+  text-align: center;
+  padding: 0 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.addInfo h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--White);
+}
+
+.addInfo p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+.item-1,
+.item-2,
+.item-3,
+.item-4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.item-1 p,
+.item-2 p,
+.item-3 p,
+.item-4 p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+span {
+  opacity: 0.4;
+}
+.subItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.subItem img {
+  width: 1.35rem;
+}
+
+.title-1 {
+  color: var(--LightRed);
+  font-weight: 800;
+}
+.title-2 {
+  color: var(--OrangeyYellow);
+  font-weight: 800;
+}
+.title-3 {
+  color: var(--GreenTeal);
+  font-weight: 800;
+}
+.title-4 {
+  color: var(--LightLavender);
+  font-weight: 800;
+}
+
+.sumary-container {
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+}
+.sumary-container h4 {
+  color: var(--DarkGrayBlue);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.items {
+  margin: auto;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+button {
+  width: 100%;
+  background-color: var(--DarkGrayBlue);
+  color: var(--White);
+  border: none;
+  padding: 1rem;
+  border-radius: 5rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+button:hover {
+    background-color: var(--CobaltBlue);
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--PaleBlue);
+  }
+   .container {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    height: auto;
+    background-color: var(--White);
+    border-radius: 2.5rem;
+  }
+  
+  .header {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5rem;
+    gap: 2rem;
+    padding: 0 5rem 0 ;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+    opacity: 0.6;
+    font-weight: 700;
+  }
+  
+  .score {
+    width: 12rem;
+    height: 12rem;
+    margin-top: 2rem;
+  }
+
+  .score h2 {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  .score span {
+    font-size: 1rem;
+    opacity: 0.6;
+
+    font-weight: 800;
+    margin-top: 0.5rem;
+  }
+
+  .addInfo h2 {
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+.addInfo p {
+    font-size: .9rem;
+    line-height: 1.4;
+}
+    
+  .sumary-container {
+    padding: 1rem 2rem 2rem;
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+  .sumary-container h4 {
+    font-size: 1.5rem;
+    margin-top: 2.9rem;
+  }
+  .items {
+    margin-bottom: 4rem;
+  }
+
+  .item-1,
+  .item-2,
+  .item-3,
+  .item-4 {
+    margin-top: 3.5rem;
+  } 
+}
+
+
